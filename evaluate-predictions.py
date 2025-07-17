@@ -2,6 +2,13 @@
 
 # This source code is licensed under the MIT license found in the
 # LICENSE file in the root directory of this source tree.
+import os
+DISK = "/playpen-nas-ssd4/nofrahm/Embodied/3D-Mem-AEQA-Eval/model_downloads"
+os.environ["HF_HOME"] = DISK # hub + token
+os.environ["HUGGINGFACE_HUB_CACHE"] = f"{DISK}/hub" # repos
+os.environ["TRANSFORMERS_CACHE"] = f"{DISK}/transformers" # model weights
+os.environ["HF_DATASETS_CACHE"] = f"{DISK}/datasets" # Arrow datasets
+os.environ["TORCH_HOME"] = f"{DISK}/torch" # torch-hub models
 
 import argparse
 import json
@@ -10,7 +17,7 @@ from pathlib import Path
 import numpy as np
 from tqdm import tqdm
 
-from openeqa.evaluation.llm_match import get_llm_match_score
+from openeqa.evaluation.llm_match import get_llm_match_score, QwenLoader, get_Qwen_llm_match_score
 
 
 def parse_args() -> argparse.Namespace:
@@ -60,6 +67,10 @@ def parse_args() -> argparse.Namespace:
 
 
 def main(args: argparse.Namespace):
+
+    # load LLM (Llama3?)
+    _ = QwenLoader()
+
     # load results
     results = json.load(args.results.open("r"))
     # remove item if anser is null
@@ -108,7 +119,8 @@ def main(args: argparse.Namespace):
             if end_idx >= 0 and end_idx + 1 < len(result["answer"]):
                 result["answer"] = result["answer"][: end_idx + 1]
 
-        score = get_llm_match_score(
+        # score = get_llm_match_score(
+        score = get_Qwen_llm_match_score(
             question=item["question"],
             answer=item["answer"],
             prediction=result["answer"],
