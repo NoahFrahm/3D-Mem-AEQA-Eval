@@ -3,11 +3,8 @@
 # This source code is licensed under the MIT license found in the
 # LICENSE file in the root directory of this source tree.
 import os
-DISK = "/playpen-nas-ssd4/nofrahm/Embodied/3D-Mem-AEQA-Eval/model_downloads"
+DISK = "./model_downloads"
 os.environ["HF_HOME"] = DISK # hub + token
-os.environ["HUGGINGFACE_HUB_CACHE"] = f"{DISK}/hub" # repos
-os.environ["TRANSFORMERS_CACHE"] = f"{DISK}/transformers" # model weights
-os.environ["HF_DATASETS_CACHE"] = f"{DISK}/datasets" # Arrow datasets
 os.environ["TORCH_HOME"] = f"{DISK}/torch" # torch-hub models
 
 import argparse

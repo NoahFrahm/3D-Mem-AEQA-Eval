@@ -114,29 +114,8 @@ def get_Qwen_llm_match_score(
     )
 
     score = parse_score(prompt_answer[0]) 
-    breakpoint()
-    
+
     return score
-
-    # call_qwen_api(
-    #     sys_prompt,
-    #     contents,
-    #     messages=messages,
-    #     seed=seed,
-    #     max_tokens=max_tokens,
-    #     temperature=temperature,
-    # )
-
-    # output = call_openai_api(
-    #     messages=messages,
-    #     model=openai_model,
-    #     seed=openai_seed,
-    #     max_tokens=openai_max_tokens,
-    #     temperature=openai_temperature,
-    #     verbose=verbose,
-    # )
-    
-    # return parse_score(output) 
 
 
 # class LlamaLoader():
@@ -291,52 +270,6 @@ class QwenLoader():
             skip_special_tokens=True,
             clean_up_tokenization_spaces=False
         )
-
-
-def qwen_format_content(contents):
-    formated_content = []
-    for c in contents:
-        formated_content.append({"type": "text", "text": c[0]})
-        if len(c) == 2:
-            formated_content.append(
-                {
-                    "type": "image_url",
-                    "image_url": f"data:image/png;base64,{c[1]}"
-                }
-            )
-    return formated_content
-
-
-def call_qwen_api(sys_prompt, contents) -> Optional[str]:
-    max_tries = 5
-    retry_count = 0
-    formated_content = qwen_format_content(contents)
-    message_text = [
-        {"role": "system", "content": sys_prompt},
-        {"role": "user", "content": formated_content},
-    ]
-
-    qwen_model = QwenLoader()
-
-    while retry_count < max_tries:
-        try:
-            prompt_answer = qwen_model.infer(
-                prompt=message_text,
-                temperature=0.7,
-                top_p=0.95,
-                max_new_tokens=4096,  # Adjusted to match the original intent
-            )
-            return prompt_answer[0]
-        except Exception as e:
-            print("Error: ", e)
-            # time.sleep(60)
-            retry_count += 1
-            continue
-
-    return None
-
-
-
 
 
 
