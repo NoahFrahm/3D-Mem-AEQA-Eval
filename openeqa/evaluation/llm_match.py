@@ -27,6 +27,7 @@ def parse_score(output: str, tag: str = "Your mark:") -> str:
         return int(output)
     start_idx = output.find(tag)
     if start_idx == -1:
+        # breakpoint()
         raise ValueError("Invalid output string: {}".format(output))
     end_idx = output.find("\n", start_idx)
     if end_idx == -1:
@@ -196,7 +197,7 @@ class QwenLoader():
     _instance = None
     _models = {}
     model_id = "Qwen/Qwen2.5-VL-7B-Instruct" # needs local storage due to large size
-    # model_id = "Qwen/Qwen2.5-VL-3B-Instruct"
+    # model_id = "Qwen/Qwen2.5-VL-32B-Instruct"
     model_name = "Qwen2_5_VL"
 
     def __new__(cls):

@@ -80,12 +80,53 @@ CUDA_VISIBLE_DEVICES=0 python evaluate-predictions.py --dataset /playpen-nas-ssd
 CUDA_VISIBLE_DEVICES=0 python get-scores.py --dataset open-eqa-184 --result-path /playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/results/exp_eval_aeqa_confidence_choice_baseline_184
 
 
+# Dynamic (everystep bad prompts)
+CUDA_VISIBLE_DEVICES=0 python evaluate-predictions.py --dataset /playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/data/aeqa_questions-184.json /playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/results/exp_eval_aeqa_dynamic_swap_everystep_debug_184/gpt_answer.json
+CUDA_VISIBLE_DEVICES=0 python get-scores.py --dataset open-eqa-184 --result-path /playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/results/exp_eval_aeqa_dynamic_swap_everystep_debug_184
 
-# Dynamic swapping (everystep)
+
+# Dynamic swapping (everystep og prompts)
 CUDA_VISIBLE_DEVICES=0 python evaluate-predictions.py --dataset /playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/data/aeqa_questions-184.json /playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/results/exp_eval_aeqa_dynamic_swap_everystep_184/gpt_answer.json
 CUDA_VISIBLE_DEVICES=0 python get-scores.py --dataset open-eqa-184 --result-path /playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/results/exp_eval_aeqa_dynamic_swap_everystep_184
 
-# Dynamic swapping (commit)
-CUDA_VISIBLE_DEVICES=0 python evaluate-predictions.py --dataset /playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/data/aeqa_questions-184.json /playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/results/exp_eval_aeqa_dynamic_swap_commit_184/gpt_answer.json
-CUDA_VISIBLE_DEVICES=0 python get-scores.py --dataset open-eqa-184 --result-path /playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/results/exp_eval_aeqa_dynamic_swap_commit_184
+
+# Dynamic swapping (commit og prompts) paths need to be updated
+CUDA_VISIBLE_DEVICES=0 python evaluate-predictions.py --dataset /playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/data/aeqa_questions-184.json /playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/results/exp_eval_aeqa_dynamic_swap_everystep_debug_184/gpt_answer.json
+CUDA_VISIBLE_DEVICES=0 python get-scores.py --dataset open-eqa-184 --result-path /playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/results/exp_eval_aeqa_dynamic_swap_everystep_debug_184
+
+
+/playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/results/exp_eval_aeqa_dynamic_swap_everystep_184
+
+
+# nearest frontier baseline
+CUDA_VISIBLE_DEVICES=0 python evaluate-predictions.py --dataset /playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/data/aeqa_questions-184.json /playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/results/exp_eval_aeqa_closest_frontier_baseline_184/gpt_answer.json
+CUDA_VISIBLE_DEVICES=0 python get-scores.py --dataset open-eqa-184 --result-path /playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/results/exp_eval_aeqa_closest_frontier_baseline_184
+
+
+
+# Dynamic (everystep bad prompts)
+CUDA_VISIBLE_DEVICES=3,4,5,6 python evaluate-predictions.py --dataset /playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/data/aeqa_questions-184.json /playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/results/exp_eval_aeqa_dynamic_swap_everystep_debug_184/gpt_answer.json
+CUDA_VISIBLE_DEVICES=3,4,5,6 python get-scores.py --dataset open-eqa-184 --result-path /playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/results/exp_eval_aeqa_dynamic_swap_everystep_debug_184
+
+
+# Dynamic blip fallback og promtps (everystep)
+CUDA_VISIBLE_DEVICES=0 python evaluate-predictions.py --dataset /playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/data/aeqa_questions-184.json /playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/results/exp_eval_aeqa_og_prompt_blip_fallback_dynamic_everystep_184/gpt_answer.json
+CUDA_VISIBLE_DEVICES=0 python get-scores.py --dataset open-eqa-184 --result-path /playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/results/exp_eval_aeqa_og_prompt_blip_fallback_dynamic_everystep_184
+
+
+
+# 32B dynamic everstep 
+CUDA_VISIBLE_DEVICES=0 python evaluate-predictions.py --dataset /playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/data/aeqa_questions-184.json /playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/results/exp_eval_aeqa_dynamic_swap_everystep_32B_184/gpt_answer.json
+CUDA_VISIBLE_DEVICES=0 python get-scores.py --dataset open-eqa-184 --result-path /playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/results/exp_eval_aeqa_dynamic_swap_everystep_32B_184
+
+
+# 7B dynamic everstep (fixed bug)
+CUDA_VISIBLE_DEVICES=0 python evaluate-predictions.py --dataset /playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/data/aeqa_questions-184.json /playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/results/exp_eval_aeqa_dynamic_swap_everystep_184_run_bug_fixed/gpt_answer.json
+CUDA_VISIBLE_DEVICES=0 python get-scores.py --dataset open-eqa-184 --result-path /playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/results/exp_eval_aeqa_dynamic_swap_everystep_184_run_bug_fixed
+
+
+# 32B dynamic everstep (fixed bug)
+CUDA_VISIBLE_DEVICES=0 python evaluate-predictions.py --dataset /playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/data/aeqa_questions-184.json /playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/results/exp_eval_aeqa_dynamic_swap_everystep_32B_184/gpt_answer.json
+CUDA_VISIBLE_DEVICES=0 python get-scores.py --dataset open-eqa-184 --result-path /playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/results/exp_eval_aeqa_dynamic_swap_everystep_32B_184
+
 
