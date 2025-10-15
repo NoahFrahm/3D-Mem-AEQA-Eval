@@ -35,3 +35,7 @@ folders = [
 #Endpoint URL - Needs to point to Qwen3 inference server.
 server_endpoint_link = "http://{host}:{port}/Qwen_VL/infer"
 ```
+
+```
+python batch-run.py
+```
