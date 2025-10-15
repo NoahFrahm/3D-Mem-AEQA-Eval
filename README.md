@@ -21,3 +21,17 @@ python evaluate-predictions.py --dataset data/<dataset>.json <path/to/results>/g
 
 python get-scores.py --dataset <dataset> --result-path <path/to/results>
 ```
+
+### Running batch evaluations
+
+Edit these variables in batch-run.py
+```
+#Complete path of all the folders that need to scored.
+folders = [
+    "/PATH-TO-RESULTS/exp_eval_aeqa_184-7B-baseline",
+    "/PATH-TO-RESULTS/exp_eval_aeqa_184-32B-baseline"
+]
+
+#Endpoint URL - Needs to point to Qwen3 inference server.
+server_endpoint_link = "http://{host}:{port}/Qwen_VL/infer"
+```
