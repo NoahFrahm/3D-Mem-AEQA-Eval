@@ -1,0 +1,163 @@
+{
+  "025257b6-8b7e-4f6f-aacc-1788069cbfad": {
+    "score": 4.0,
+    "grounded": "1",
+    "accuracy": "4",
+    "path": 6.480274829161296,
+    "category": "world knowledge"
+  },
+  "04c770eb-c1a7-44c4-b91f-8aa24e2dbed9": {
+    "score": 5.0,
+    "grounded": "1",
+    "accuracy": "5",
+    "path": 6.467303649072413,
+    "category": "object state recognition"
+  },
+  "06c9b25c-b117-4b8f-a052-6fd71b2bb043": {
+    "score": 5.0,
+    "grounded": "1",
+    "accuracy": "5",
+    "path": 2.7638345536096125,
+    "category": "attribute recognition"
+  },
+  "08e8e5fd-31a3-466b-afd6-fa171f1d9de4": {
+    "score": 3.0,
+    "grounded": "1",
+    "accuracy": "3",
+    "path": 3.6221549370416195,
+    "category": "object recognition"
+  },
+  "0bc41aa3-c14f-4117-92ff-868fda0e5e4b": {
+    "score": 0.0,
+    "grounded": "0",
+    "accuracy": "1",
+    "path": 16.25884312601857,
+    "category": "object localization"
+  },
+  "0c81b6f8-2d46-4e07-a9d3-a019729d5570": {
+    "score": 0.0,
+    "grounded": "0",
+    "accuracy": "2",
+    "path": 7.99299178045187,
+    "category": "world knowledge"
+  },
+  "0df60236-15ad-4166-a31a-a98d14214fdb": {
+    "score": 5.0,
+    "grounded": "1",
+    "accuracy": "5",
+    "path": 2.209975124224178,
+    "category": "attribute recognition"
+  },
+  "0e49111c-608d-4d02-aacb-3705bdd0ca5e": {
+    "score": 0.0,
+    "grounded": "0",
+    "accuracy": "2",
+    "path": 4.971970017200156,
+    "category": "functional reasoning"
+  },
+  "0ef0ebd1-db05-4f87-adc7-d01a640c1eed": {
+    "score": 5.0,
+    "grounded": "1",
+    "accuracy": "5",
+    "path": 2.652306903920877,
+    "category": "object localization"
+  },
+  "10d6d14b-ef30-42b6-89d7-b79eb4ce9b5d": {
+    "score": 0.0,
+    "grounded": "0",
+    "accuracy": "1",
+    "path": 34.38545672763934,
+    "category": "object recognition"
+  },
+  "11574d0e-54bb-4900-b230-0f76f1f43266": {
+    "score": 0.0,
+    "grounded": "0",
+    "accuracy": "2",
+    "path": 4.414966346731181,
+    "category": "attribute recognition"
+  },
+  "11da38f3-c32f-4443-bd33-6a2c1ec22a64": {
+    "score": 5.0,
+    "grounded": "1",
+    "accuracy": "5",
+    "path": 25.997799328031654,
+    "category": "world knowledge"
+  },
+  "122417bb-6bcd-4d2f-87dc-96be6ba6c262": {
+    "score": 0.0,
+    "grounded": "0",
+    "accuracy": "1",
+    "path": 0.36055512754639896,
+    "category": "world knowledge"
+  },
+  "13d097e7-12c7-48e0-92c4-9667fc7f9c60": {
+    "score": 0.0,
+    "grounded": "0",
+    "accuracy": "2",
+    "path": 5.103921786540038,
+    "category": "world knowledge"
+  },
+  "15ef0e88-83c5-41dd-9a1f-cf9feb3dafbb": {
+    "score": 0.0,
+    "grounded": "0",
+    "accuracy": "1",
+    "path": 8.23602989233156,
+    "category": "object state recognition"
+  },
+  "16345ba0-9217-4f07-a79d-bbb965bc69a4": {
+    "score": 0.0,
+    "grounded": "0",
+    "accuracy": "1",
+    "path": 49.89612382919764,
+    "category": "spatial understanding"
+  },
+  "182db45a-eeda-4ccd-841b-20ce864f5c1e": {
+    "score": 5.0,
+    "grounded": "1",
+    "accuracy": "5",
+    "path": 10.429724197947836,
+    "category": "attribute recognition"
+  },
+  "1dcdd225-eba2-4ba1-97b6-c4cdc7ca4e9b": {
+    "score": 0.0,
+    "grounded": "0",
+    "accuracy": "2",
+    "path": 1.456341213452821,
+    "category": "world knowledge"
+  },
+  "1eb05aa7-89a0-4e9f-a06d-e05a2e4e8e63": {
+    "score": 0.0,
+    "grounded": "0",
+    "accuracy": "2",
+    "path": 40.537891802783975,
+    "category": "attribute recognition"
+  },
+  "1fcfa31c-43d6-4c9a-acb6-21f019956e1c": {
+    "score": 0.0,
+    "grounded": "0",
+    "accuracy": "2",
+    "path": 1.360258416907893,
+    "category": "spatial understanding"
+  },
+  "206ca121-9185-484d-ab22-acfb082b1359": {
+    "score": 4.0,
+    "grounded": "1",
+    "accuracy": "4",
+    "path": 2.6028990922030872,
+    "category": "functional reasoning"
+  },
+  "225c132a-1ec6-47b3-8f5e-887b91168b93": {
+    "score": 5.0,
+    "grounded": "1",
+    "accuracy": "5",
+    "path": 2.8839633886304537,
+    "category": "object recognition"
+  },
+  "226ab7fe-8b53-4842-b313-1e7644771cb2": {
+    "score": 1.5,
+    "grounded": "0.5",
+    "accuracy": "3",
+    "path": 2.0433981132056602,
+    "category": "object recognition"
+  }
+}

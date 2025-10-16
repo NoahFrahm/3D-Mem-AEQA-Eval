@@ -4,17 +4,18 @@ import os
 dir = os.path.dirname(os.path.abspath(__file__))
 
 folders = [
-    "/playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/results-past_runs/exp_eval_aeqa_184-7B-baseline",
-    "/playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/results-past_runs/exp_eval_aeqa_184-32B-baseline",
+    "/playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/results/exp_eval_aeqa_184-32B-baseline",
+    "/playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/results/exp_eval_aeqa_184-CDF-32B",
     "/playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/results-past_runs/exp_eval_aeqa_closest_frontier_baseline_184",
-    "/playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/results-past_runs/exp_eval_aeqa_184-CDF-32B",
-    "/playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/results-past_runs/exp_eval_aeqa_dynamic_swap_everystep_32B_184_run_bug_fixed",
-    "/playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/results-past_runs/exp_eval_aeqa_dynamic_swap_everystep_184_run_bug_fixed",
+    "/playpen-nas-ssd4/nofrahm/Embodied/Multi-Mem/results/exp_eval_aeqa_184-CDF-32B-thresh-0.25",
 ]
 
-server_endpoint_link = "http://zidane.cs.unc.edu:12182/Qwen_VL/infer" #Only use Qwen3 30B
+server_endpoint_link = "http://mbappe.cs.unc.edu:12182/Qwen_VL/infer" #Only use Qwen3 30B
 
-with open(os.path.join(dir, 'data', 'log.txt'), 'r+') as file:
+log_file_path = os.path.join(dir, 'data', 'log.txt')
+os.makedirs(os.path.dirname(log_file_path), exist_ok=True)
+with open(log_file_path, 'a+') as file:
+    file.seek(0) # Move file pointer to the beginning before truncating
     file.truncate(0)
 
 for exp in folders:
